@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Native Mandelbrot</title>
+</head>
+<body>
+<div>
+  <button onclick="run()">Run</button>
+</div>
+<div>
+  <canvas id="screen" width="300" height="200"></canvas>
+</div>
+<script>
+var remote = require('remote');
+var mandelbrot = require('./build/Release/mandelbrot');
+
+function run() {
+  var canvas = document.getElementById('screen');
+  var context = canvas.getContext('2d');
+  var imageData = context.createImageData(300, 200);
+  mandelbrot.mandelbrot(imageData.data);
+  context.putImageData(imageData, 0, 0);
+}
+</script>
+</body>
+</html>

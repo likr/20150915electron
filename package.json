@@ -1,0 +1,11 @@
+{
+  "name": "20150915electron",
+  "version": "1.0.0",
+  "description": "Drawing Mandelbrot set using Electron and native addon",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yosuke Onoue <onoue@likr-lab.com>",
+  "license": "MIT"
+}
